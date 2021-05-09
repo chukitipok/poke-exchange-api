@@ -12,9 +12,9 @@
 	</parent>
 
 	<groupId>fr.esgi</groupId>
-	<artifactId>pokExchange</artifactId>
+	<artifactId>poke-exchange-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>PokExchange</name>
+	<name>Poke Exchange API</name>
 	<description>A Pokemon card application for collection and cards trade.</description>
 
 	<properties>
