@@ -1,4 +1,4 @@
-package fr.esgi.pokExchange;
+package fr.esgi.poke_exchange_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
