@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PokExchangeApplication {
+public class PokeExchangeApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PokExchangeApplication.class, args);
+		SpringApplication.run(PokeExchangeApiApplication.class, args);
 	}
 
 }
