@@ -1,0 +1,32 @@
+version: "3.1"
+
+volumes:
+  postgres-data:
+  postgres-log:
+
+networks:
+  database-network:
+
+services:
+  poke-exchange-api:
+    image: poke-exchange-api:latest
+    networks:
+      - database-network
+    depends_on:
+      - poke-exchange-db
+    ports:
+      - 6000:8080
+
+  poke-exchange-db:
+    image: postgres:12.2-alpine
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_DB=poke_exchange_db
+      - POSTGRES_USER=local
+      - POSTGRES_PASSWORD=local
+      - POSTGRES_HOST=0.0.0.0
+    volumes:
+      - ./.docker/postgres/data:/var/lib/postgresql/data
+      - ./.docker/postgres/log:/var/log/postgresql
+    networks:
+      - database-network
